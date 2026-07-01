@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#FFFBF2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="470" y="250" width="260" height="260" rx="130" fill="#FF6B5E" stroke="#2E2A26" stroke-width="14"/>
+    <text x="600" y="440" font-family="'Jua',sans-serif" font-size="150" fill="#fff" text-anchor="middle">로</text>
+    <circle cx="410" cy="230" r="34" fill="#FFCB3D" stroke="#2E2A26" stroke-width="10"/>
+    <rect x="760" y="520" width="56" height="56" rx="14" fill="#62C370" stroke="#2E2A26" stroke-width="10"/>
+    <circle cx="800" cy="250" r="26" fill="#A77BE3" stroke="#2E2A26" stroke-width="10"/>
+    <text x="600" y="620" font-family="'Jua',sans-serif" font-size="60" fill="#2E2A26" text-anchor="middle">헬로로아</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Gothic+A1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Gothic A1',sans-serif;color:#2E2A26;background:#FFFBF2;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  ::selection{background:#FFCB3D}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes floaty2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-22px) rotate(10deg)}}
+  @keyframes spinslow{to{transform:rotate(360deg)}}
+</style>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=ilt52cy3uj"></script>
+</helmet>
+
+<div style="background:#FFFBF2;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:60;background:rgba(255,251,242,0.88);backdrop-filter:blur(10px);border-bottom:2px solid #2E2A26">
+    <div style="max-width:1180px;margin:0 auto;padding:12px clamp(18px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <a href="#top" style="display:flex;align-items:center;gap:11px;text-decoration:none">
+        <span style="width:40px;height:40px;border-radius:50%;background:#FF6B5E;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:22px;box-shadow:3px 3px 0 #2E2A26">로</span>
+        <span style="font-family:'Jua',sans-serif;font-size:23px;color:#2E2A26;letter-spacing:-0.5px">헬로로아</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;justify-content:flex-end">
+        <a href="#about" style="text-decoration:none;font-weight:700;font-size:16px;color:#2E2A26">소개</a>
+        <a href="#director" style="text-decoration:none;font-weight:700;font-size:16px;color:#2E2A26">원장 소개</a>
+        <a href="#classes" style="text-decoration:none;font-weight:700;font-size:16px;color:#2E2A26">수업</a>
+        <a href="#gallery" style="text-decoration:none;font-weight:700;font-size:16px;color:#2E2A26">갤러리</a>
+        <a href="#location" style="text-decoration:none;font-weight:700;font-size:16px;color:#2E2A26">오시는 길</a>
+        <a href="#contact" style="text-decoration:none;font-family:'Jua',sans-serif;font-size:16px;color:#fff;background:#2E2A26;padding:9px 18px;border-radius:999px;box-shadow:3px 3px 0 #FFCB3D" style-hover="transform:translate(-1px,-1px)">상담 신청</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="position:relative;overflow:hidden;background:#FFFBF2;scroll-margin-top:90px">
+    <div style="position:absolute;top:-60px;right:-40px;width:260px;height:260px;border-radius:50%;background:#FFE1A8;opacity:0.6;filter:blur(2px)"></div>
+    <div style="position:absolute;bottom:-30px;left:-50px;width:200px;height:200px;border-radius:50%;background:#CDEBF6;opacity:0.7"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(18px,5vw,56px) clamp(52px,7vw,96px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(32px,5vw,64px)">
+      <div style="flex:1 1 360px;min-width:min(100%,340px)">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#FF6B5E;transform:rotate(-2deg)">
+          <span style="width:10px;height:10px;border-radius:50%;background:#62C370;display:inline-block"></span>
+          유아 · 초등 창의미술 &amp; 미술심리
+        </span>
+        <h1 style="font-family:'Jua',sans-serif;font-size:clamp(36px,6.4vw,66px);line-height:1.16;margin:14px 0 20px;letter-spacing:-1px">
+          그리는 <span style="color:#FF6B5E">아이의 마음</span>이<br>
+          무럭무럭 <span style="color:#34B3E4">자라는 곳</span>
+        </h1>
+        <p style="font-size:clamp(16px,1.7vw,19px);line-height:1.75;color:#6B6259;max-width:480px;margin:0 0 30px">
+          헬로로아는 아이가 그림으로 마음을 표현하고, 그 마음을 따뜻하게 살펴주는 창의미술·미술심리 공간이에요. 소중한 내 가족이라 생각하고 함께합니다.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px">
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:#FF6B5E;color:#fff;font-family:'Jua',sans-serif;font-size:18px;border:2px solid #2E2A26;border-radius:999px;text-decoration:none;box-shadow:4px 4px 0 #2E2A26" style-hover="transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2E2A26">상담 신청하기</a>
+          <a href="#classes" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:#fff;color:#2E2A26;font-family:'Jua',sans-serif;font-size:18px;border:2px solid #2E2A26;border-radius:999px;text-decoration:none;box-shadow:4px 4px 0 #2E2A26" style-hover="transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2E2A26">수업 둘러보기</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 15px;background:#fff;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:14px"><span style="width:9px;height:9px;border-radius:50%;background:#FFCB3D"></span>소수정예</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 15px;background:#fff;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:14px"><span style="width:9px;height:9px;border-radius:50%;background:#62C370"></span>미술심리 전문 선생님</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 15px;background:#fff;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:14px"><span style="width:9px;height:9px;border-radius:50%;background:#A77BE3"></span>편안한 상담</span>
+        </div>
+      </div>
+      <div style="flex:1 1 380px;min-width:min(100%,340px);position:relative">
+        <div style="position:absolute;top:-22px;left:-16px;width:54px;height:54px;border-radius:50%;background:#FFCB3D;border:2px solid #2E2A26;z-index:3;animation:floaty 5s ease-in-out infinite"></div>
+        <div style="position:absolute;bottom:-18px;right:24px;width:40px;height:40px;border-radius:12px;background:#62C370;border:2px solid #2E2A26;z-index:3;animation:floaty2 6s ease-in-out infinite"></div>
+        <div style="position:absolute;top:40%;right:-20px;width:34px;height:34px;border-radius:50%;background:#A77BE3;border:2px solid #2E2A26;z-index:3;animation:floaty 4.5s ease-in-out infinite"></div>
+        <div onMouseEnter="{{ pauseHero }}" onMouseLeave="{{ resumeHero }}" style="position:relative;transform:rotate(-2.5deg);border:3px solid #2E2A26;border-radius:28px;overflow:hidden;box-shadow:10px 10px 0 #34B3E4;aspect-ratio:4/3;background:#FDEFD3">
+          <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="1">
+            <div style="{{ slide.wrapStyle }}">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-{{ slide.n }}" placeholder="블로그 대표 사진을 끌어다 놓으세요" shape="rect" fit="cover" hint-size="100%,100%"></x-import>
+            </div>
+          </sc-for>
+          <button onClick="{{ prevHero }}" aria-label="이전 사진" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);z-index:6;width:38px;height:38px;border-radius:50%;background:rgba(255,251,242,0.92);border:2px solid #2E2A26;box-shadow:2px 2px 0 #2E2A26;cursor:pointer;font-family:'Jua',sans-serif;font-size:20px;line-height:1;color:#2E2A26;display:grid;place-items:center;padding:0 3px 3px 0" style-hover="background:#fff">‹</button>
+          <button onClick="{{ nextHero }}" aria-label="다음 사진" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:6;width:38px;height:38px;border-radius:50%;background:rgba(255,251,242,0.92);border:2px solid #2E2A26;box-shadow:2px 2px 0 #2E2A26;cursor:pointer;font-family:'Jua',sans-serif;font-size:20px;line-height:1;color:#2E2A26;display:grid;place-items:center;padding:0 0 3px 3px" style-hover="background:#fff">›</button>
+          <div style="position:absolute;left:0;right:0;bottom:12px;z-index:6;display:flex;gap:8px;justify-content:center">
+            <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="1">
+              <button onClick="{{ slide.go }}" aria-label="사진 보기" style="{{ slide.dotStyle }}"></button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="background:#fff;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,110px) 0;scroll-margin-top:80px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(36px,5vw,56px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#FF6B5E;transform:rotate(-2deg);display:inline-block">헬로로아 이야기</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 16px;letter-spacing:-1px">미술은 아이가 처음 배우는<br>마음의 언어예요</h2>
+        <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:#6B6259;margin:0">
+          정답을 맞히는 미술이 아니라, 마음껏 표현하며 스스로를 알아가는 미술을 가르칩니다. 아이의 그림에 담긴 감정을 함께 읽고 보듬으며, 편안하고 안전한 환경에서 창의력과 자존감이 함께 자라도록 돕습니다.
+        </p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:22px">
+        <div style="background:#FFF0EB;border:2px solid #2E2A26;border-radius:22px;padding:26px 22px;box-shadow:5px 5px 0 #2E2A26">
+          <div style="width:48px;height:48px;border-radius:50%;background:#FF6B5E;color:#fff;display:grid;place-items:center;font-family:'Jua',sans-serif;font-size:22px;box-shadow:3px 3px 0 #2E2A26;margin-bottom:16px">1</div>
+          <h3 style="font-family:'Jua',sans-serif;font-size:21px;margin:0 0 8px">표현하는 즐거움</h3>
+          <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0">정답 없는 미술. 아이가 마음껏 상상하고 표현하며 자신감을 키워요.</p>
+        </div>
+        <div style="background:#E9F6FC;border:2px solid #2E2A26;border-radius:22px;padding:26px 22px;box-shadow:5px 5px 0 #2E2A26">
+          <div style="width:48px;height:48px;border-radius:50%;background:#34B3E4;color:#fff;display:grid;place-items:center;font-family:'Jua',sans-serif;font-size:22px;box-shadow:3px 3px 0 #2E2A26;margin-bottom:16px">2</div>
+          <h3 style="font-family:'Jua',sans-serif;font-size:21px;margin:0 0 8px">마음을 살피는 미술</h3>
+          <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0">그림 속에 담긴 아이의 감정을 함께 읽고 따뜻하게 보듬어요.</p>
+        </div>
+        <div style="background:#EDF8EE;border:2px solid #2E2A26;border-radius:22px;padding:26px 22px;box-shadow:5px 5px 0 #2E2A26">
+          <div style="width:48px;height:48px;border-radius:50%;background:#62C370;color:#fff;display:grid;place-items:center;font-family:'Jua',sans-serif;font-size:22px;box-shadow:3px 3px 0 #2E2A26;margin-bottom:16px">3</div>
+          <h3 style="font-family:'Jua',sans-serif;font-size:21px;margin:0 0 8px">소수정예 케어</h3>
+          <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0">한 명 한 명 눈을 맞추는 소수 인원 수업으로 세심하게 지도해요.</p>
+        </div>
+        <sc-if value="{{ showCounseling }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#F3EDFC;border:2px solid #2E2A26;border-radius:22px;padding:26px 22px;box-shadow:5px 5px 0 #2E2A26">
+            <div style="width:48px;height:48px;border-radius:50%;background:#A77BE3;color:#fff;display:grid;place-items:center;font-family:'Jua',sans-serif;font-size:22px;box-shadow:3px 3px 0 #2E2A26;margin-bottom:16px">4</div>
+            <h3 style="font-family:'Jua',sans-serif;font-size:21px;margin:0 0 8px">편안한 상담</h3>
+            <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0">의료기록이 남지 않고 약물에 의존하지 않는, 가족처럼 편안한 예술심리 상담.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section id="director" style="background:#FFFBF2;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,110px) 0;scroll-margin-top:80px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(34px,5vw,52px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#A77BE3;transform:rotate(-2deg);display:inline-block">원장 소개</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 0;letter-spacing:-1px">믿고 맡기는 선생님</h2>
+      </div>
+      <div style="max-width:860px;margin:0 auto;background:#fff;border:2px solid #2E2A26;border-radius:26px;box-shadow:7px 7px 0 #A77BE3;padding:clamp(24px,3.5vw,40px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,40px);align-items:flex-start">
+        <div style="flex:0 0 auto;width:clamp(160px,26vw,220px);margin:0 auto">
+          <div style="aspect-ratio:1/1;border:2px solid #2E2A26;border-radius:22px;overflow:hidden;background:#F3EDFC">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="director-photo" placeholder="원장 사진" shape="rect" fit="cover" hint-size="100%,100%"></x-import>
+          </div>
+        </div>
+        <div style="flex:1 1 300px;min-width:min(100%,280px)">
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px">
+            <h3 style="font-family:'Jua',sans-serif;font-size:clamp(26px,3.4vw,34px);margin:0;letter-spacing:-0.5px">OOO</h3>
+            <span style="font-weight:700;font-size:15px;color:#A77BE3">원장 · 대표 강사</span>
+          </div>
+          <p style="font-size:15px;line-height:1.7;color:#6B6259;margin:0 0 20px">아이 한 명 한 명의 마음을 살피며 창의미술과 미술심리를 함께 이끌어온 선생님이에요. <span style="color:#B8AE9F">(소개 문구를 넣어주세요)</span></p>
+          <div style="border-top:2px dashed #E7DECF">
+            <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:2px dashed #E7DECF">
+              <span style="flex:none;width:8px;height:8px;border-radius:50%;background:#FF6B5E;transform:translateY(-2px)"></span>
+              <span style="font-size:15px;line-height:1.55;color:#2E2A26">OO대학교 미술교육과 졸업 <span style="color:#B8AE9F">(약력을 넣어주세요)</span></span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:2px dashed #E7DECF">
+              <span style="flex:none;width:8px;height:8px;border-radius:50%;background:#34B3E4;transform:translateY(-2px)"></span>
+              <span style="font-size:15px;line-height:1.55;color:#2E2A26">미술심리상담사 자격 보유</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:2px dashed #E7DECF">
+              <span style="flex:none;width:8px;height:8px;border-radius:50%;background:#62C370;transform:translateY(-2px)"></span>
+              <span style="font-size:15px;line-height:1.55;color:#2E2A26">유아·초등 미술 교육 경력 00년</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:baseline;padding:12px 0">
+              <span style="flex:none;width:8px;height:8px;border-radius:50%;background:#FFCB3D;transform:translateY(-2px)"></span>
+              <span style="font-size:15px;line-height:1.55;color:#2E2A26">헬로로아 창의미술 · 예술심리 센터 운영</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes" style="background:#fff;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,110px) 0;scroll-margin-top:80px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(36px,5vw,56px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#34B3E4;transform:rotate(-2deg);display:inline-block">수업 프로그램</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 16px;letter-spacing:-1px">우리 아이에게 딱 맞는 수업</h2>
+        <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:#6B6259;margin:0">연령과 관심에 맞춰 세심하게 구성한 프로그램이에요. 자세한 내용은 편하게 문의해 주세요.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px">
+        <div style="background:#fff;border:2px solid #2E2A26;border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 #2E2A26;display:flex;flex-direction:column">
+          <div style="height:172px;background:#FFE7A0;border-bottom:2px solid #2E2A26">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="class-yua" placeholder="유아 수업 사진" shape="rect" fit="cover" style="display:block;width:100%;height:100%" hint-size="100%,172px"></x-import>
+          </div>
+          <div style="padding:22px;display:flex;flex-direction:column;gap:11px;flex:1">
+            <span style="align-self:flex-start;padding:5px 13px;background:#FFF0EB;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:13px">5~7세 유아</span>
+            <h3 style="font-family:'Jua',sans-serif;font-size:22px;margin:0">유아 창의미술</h3>
+            <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0;flex:1">오감으로 놀며 만나는 첫 미술. 다양한 재료 탐색과 자유로운 표현으로 창의력의 씨앗을 심어요.</p>
+            <a href="#contact" style="font-family:'Jua',sans-serif;font-size:15px;color:#FF6B5E;text-decoration:none">상담 문의 →</a>
+          </div>
+        </div>
+        <div style="background:#fff;border:2px solid #2E2A26;border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 #2E2A26;display:flex;flex-direction:column">
+          <div style="height:172px;background:#CDEBF6;border-bottom:2px solid #2E2A26">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="class-elem" placeholder="초등 수업 사진" shape="rect" fit="cover" style="display:block;width:100%;height:100%" hint-size="100%,172px"></x-import>
+          </div>
+          <div style="padding:22px;display:flex;flex-direction:column;gap:11px;flex:1">
+            <span style="align-self:flex-start;padding:5px 13px;background:#E9F6FC;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:13px">초 1~6학년</span>
+            <h3 style="font-family:'Jua',sans-serif;font-size:22px;margin:0">초등 창의미술</h3>
+            <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0;flex:1">회화·조형·디자인까지, 표현의 폭을 넓히고 자기만의 이야기를 담은 작품을 완성해요.</p>
+            <a href="#contact" style="font-family:'Jua',sans-serif;font-size:15px;color:#34B3E4;text-decoration:none">상담 문의 →</a>
+          </div>
+        </div>
+        <sc-if value="{{ showCounseling }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#fff;border:2px solid #2E2A26;border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 #2E2A26;display:flex;flex-direction:column">
+            <div style="height:172px;background:#DBF3DD;border-bottom:2px solid #2E2A26">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="class-art" placeholder="미술심리 상담 사진" shape="rect" fit="cover" style="display:block;width:100%;height:100%" hint-size="100%,172px"></x-import>
+            </div>
+            <div style="padding:22px;display:flex;flex-direction:column;gap:11px;flex:1">
+              <span style="align-self:flex-start;padding:5px 13px;background:#EDF8EE;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:13px">자녀 상담</span>
+              <h3 style="font-family:'Jua',sans-serif;font-size:22px;margin:0">미술심리 상담</h3>
+              <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0;flex:1">그림으로 마음을 표현하며 감정을 다독이는 시간. 전문 선생님이 아이의 마음을 함께 살펴요.</p>
+              <a href="#contact" style="font-family:'Jua',sans-serif;font-size:15px;color:#62C370;text-decoration:none">상담 문의 →</a>
+            </div>
+          </div>
+          <div style="background:#fff;border:2px solid #2E2A26;border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 #2E2A26;display:flex;flex-direction:column">
+            <div style="height:172px;background:#EBDFFA;border-bottom:2px solid #2E2A26">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="class-family" placeholder="가족 상담 사진" shape="rect" fit="cover" style="display:block;width:100%;height:100%" hint-size="100%,172px"></x-import>
+            </div>
+            <div style="padding:22px;display:flex;flex-direction:column;gap:11px;flex:1">
+              <span style="align-self:flex-start;padding:5px 13px;background:#F3EDFC;border:2px solid #2E2A26;border-radius:999px;font-weight:700;font-size:13px">가족 함께</span>
+              <h3 style="font-family:'Jua',sans-serif;font-size:22px;margin:0">가족 상담</h3>
+              <p style="font-size:15px;line-height:1.65;color:#6B6259;margin:0;flex:1">아이와 부모가 함께하는 예술심리 상담. 관계를 회복하고 서로를 이해하는 시간을 만들어요.</p>
+              <a href="#contact" style="font-family:'Jua',sans-serif;font-size:15px;color:#A77BE3;text-decoration:none">상담 문의 →</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" style="background:#FFFBF2;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,110px) 0;scroll-margin-top:80px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(30px,4vw,46px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#62C370;transform:rotate(-2deg);display:inline-block">작품 &amp; 공간</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 12px;letter-spacing:-1px">아이들의 반짝이는 순간들</h2>
+        <p style="font-size:14px;line-height:1.6;color:#9A9086;margin:0;font-family:'Gaegu',cursive;font-weight:700">↓ 블로그 사진을 각 칸에 끌어다 놓아 채워보세요</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+        <sc-for list="{{ gallerySlots }}" as="slot" hint-placeholder-count="8">
+          <div style="height:210px;border:2px solid #2E2A26;border-radius:18px;overflow:hidden">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gallery-{{ slot }}" placeholder="블로그 사진" shape="rect" fit="cover" hint-size="100%,100%"></x-import>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" style="background:#fff;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,110px) 0;scroll-margin-top:80px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(34px,5vw,52px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#A77BE3;transform:rotate(-2deg);display:inline-block">오시는 길</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 0;letter-spacing:-1px">헬로로아를 찾아오세요</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:28px;align-items:stretch">
+        <div style="flex:1 1 320px;min-width:min(100%,300px);background:#fff;border:2px solid #2E2A26;border-radius:24px;box-shadow:6px 6px 0 #2E2A26;padding:clamp(24px,3vw,36px)">
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:2px dashed #E7DECF">
+            <span style="width:34px;height:34px;border-radius:50%;background:#FF6B5E;flex:none;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:15px">위</span>
+            <div><div style="font-weight:800;font-size:15px;margin-bottom:3px">주소</div><div style="font-size:15px;color:#6B6259;line-height:1.55">서울 양천구 목동중앙북로16길 62<br>삼원기흥빌라 1층</div></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:2px dashed #E7DECF">
+            <span style="width:34px;height:34px;border-radius:50%;background:#34B3E4;flex:none;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:15px">전</span>
+            <div><div style="font-weight:800;font-size:15px;margin-bottom:3px">전화</div><a href="tel:0507-1301-2155" style="font-size:15px;color:#6B6259;line-height:1.55;text-decoration:none;font-weight:700">0507-1301-2155</a></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:2px dashed #E7DECF">
+            <span style="width:34px;height:34px;border-radius:50%;background:#62C370;flex:none;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:15px">시</span>
+            <div><div style="font-weight:800;font-size:15px;margin-bottom:3px">운영 시간</div><div style="font-size:15px;color:#6B6259;line-height:1.6">평일 13:00 – 18:30<br>토요일 11:00 – 17:30</div></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0 4px">
+            <span style="width:34px;height:34px;border-radius:50%;background:#A77BE3;flex:none;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:15px">블</span>
+            <div><div style="font-weight:800;font-size:15px;margin-bottom:3px">블로그</div><a href="https://blog.naver.com/hello_roa" target="_blank" style="font-size:15px;color:#A77BE3;text-decoration:none;font-weight:700">blog.naver.com/hello_roa →</a></div>
+          </div>
+          <a href="#contact" style="display:inline-flex;margin-top:18px;padding:14px 28px;background:#FF6B5E;color:#fff;font-family:'Jua',sans-serif;font-size:17px;border:2px solid #2E2A26;border-radius:999px;text-decoration:none;box-shadow:4px 4px 0 #2E2A26" style-hover="transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2E2A26">상담 신청하기</a>
+        </div>
+        <div style="flex:1 1 340px;min-width:min(100%,300px);min-height:340px;position:relative;border:2px solid #2E2A26;border-radius:24px;overflow:hidden;box-shadow:6px 6px 0 #34B3E4;background:#E9F6FC">
+          <div ref="{{ mapRef }}" style="width:100%;height:100%;min-height:340px;background:#E9F6FC"></div>
+          <a href="{{ naverMapLink }}" target="_blank" style="position:absolute;right:12px;bottom:12px;z-index:600;display:inline-flex;align-items:center;gap:6px;padding:10px 16px;background:#03C75A;color:#fff;font-family:'Jua',sans-serif;font-size:14px;border:2px solid #2E2A26;border-radius:999px;text-decoration:none;box-shadow:3px 3px 0 #2E2A26" style-hover="transform:translate(-1px,-1px)">네이버 지도에서 보기 →</a>
+          <sc-if value="{{ mapNotReady }}" hint-placeholder-val="{{ true }}">
+            <div style="position:absolute;inset:0;z-index:500;display:flex;flex-direction:column;gap:11px;align-items:center;justify-content:center;background:#E9F6FC;text-align:center;padding:28px">
+              <div style="width:52px;height:52px;border-radius:50%;background:#03C75A;border:2px solid #2E2A26;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:24px;box-shadow:3px 3px 0 #2E2A26">N</div>
+              <div style="font-family:'Jua',sans-serif;font-size:18px;color:#2E2A26">헬로로아 위치</div>
+              <p style="font-size:13px;color:#6B6259;line-height:1.6;margin:0;max-width:260px">등록한 도메인에 홈페이지를 올리면 이 자리에 네이버 지도가 표시돼요.</p>
+              <a href="{{ naverMapLink }}" target="_blank" style="display:inline-flex;padding:10px 18px;background:#fff;color:#2E2A26;font-family:'Jua',sans-serif;font-size:14px;border:2px solid #2E2A26;border-radius:999px;text-decoration:none;box-shadow:3px 3px 0 #2E2A26" style-hover="transform:translate(-1px,-1px)">네이버 지도에서 보기 →</a>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#FFCB3D;border-top:2px solid #2E2A26;padding:clamp(56px,8vw,104px) 0;scroll-margin-top:80px">
+    <div style="max-width:720px;margin:0 auto;padding:0 clamp(18px,5vw,56px)">
+      <div style="text-align:center;margin-bottom:clamp(28px,4vw,44px)">
+        <span style="font-family:'Gaegu',cursive;font-weight:700;font-size:21px;color:#FF6B5E;transform:rotate(-2deg);display:inline-block">상담 신청</span>
+        <h2 style="font-family:'Jua',sans-serif;font-size:clamp(28px,4.6vw,46px);line-height:1.22;margin:8px 0 12px;letter-spacing:-1px">편안하게 문의해 주세요</h2>
+        <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.7;color:#5C4A16;margin:0">궁금한 점을 남겨주시면 빠르게 연락드릴게요. 믿고 방문해 주셔도 좋습니다.</p>
+      </div>
+      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ handleSubmit }}" style="background:#fff;border:2px solid #2E2A26;border-radius:26px;box-shadow:8px 8px 0 #2E2A26;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-wrap:wrap;gap:18px">
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:7px">
+              <label style="font-weight:800;font-size:14px">보호자 성함</label>
+              <input name="name" type="text" required placeholder="예) 김로아" style="width:100%;padding:13px 16px;border:2px solid #2E2A26;border-radius:12px;font-family:'Gothic A1',sans-serif;font-size:16px;color:#2E2A26;background:#FFFDF7" style-focus="outline:none;border-color:#FF6B5E;background:#fff">
+            </div>
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:7px">
+              <label style="font-weight:800;font-size:14px">연락처</label>
+              <input name="phone" type="tel" required placeholder="010-0000-0000" style="width:100%;padding:13px 16px;border:2px solid #2E2A26;border-radius:12px;font-family:'Gothic A1',sans-serif;font-size:16px;color:#2E2A26;background:#FFFDF7" style-focus="outline:none;border-color:#FF6B5E;background:#fff">
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:18px">
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:7px">
+              <label style="font-weight:800;font-size:14px">자녀 나이</label>
+              <input name="age" type="text" placeholder="예) 7세 / 초2" style="width:100%;padding:13px 16px;border:2px solid #2E2A26;border-radius:12px;font-family:'Gothic A1',sans-serif;font-size:16px;color:#2E2A26;background:#FFFDF7" style-focus="outline:none;border-color:#FF6B5E;background:#fff">
+            </div>
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:7px">
+              <label style="font-weight:800;font-size:14px">관심 수업</label>
+              <select name="interest" style="width:100%;padding:13px 16px;border:2px solid #2E2A26;border-radius:12px;font-family:'Gothic A1',sans-serif;font-size:16px;color:#2E2A26;background:#FFFDF7" style-focus="outline:none;border-color:#FF6B5E;background:#fff">
+                <option>유아 창의미술</option>
+                <option>초등 창의미술</option>
+                <option>미술심리 상담</option>
+                <option>가족 상담</option>
+                <option>기타 · 잘 모르겠어요</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-weight:800;font-size:14px">문의 내용</label>
+            <textarea name="message" rows="4" placeholder="궁금한 점을 편하게 적어주세요." style="width:100%;padding:13px 16px;border:2px solid #2E2A26;border-radius:12px;font-family:'Gothic A1',sans-serif;font-size:16px;color:#2E2A26;background:#FFFDF7;resize:vertical" style-focus="outline:none;border-color:#FF6B5E;background:#fff"></textarea>
+          </div>
+          <button type="submit" style="margin-top:4px;padding:16px;background:#FF6B5E;color:#fff;font-family:'Jua',sans-serif;font-size:19px;border:2px solid #2E2A26;border-radius:14px;box-shadow:5px 5px 0 #2E2A26;cursor:pointer" style-hover="transform:translate(-2px,-2px);box-shadow:7px 7px 0 #2E2A26">신청서 보내기</button>
+          <p style="text-align:center;font-size:13px;color:#9A9086;margin:0">※ 데모용 폼입니다. 실제 전송 연동이 필요하면 알려주세요.</p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ submitted }}">
+        <div style="background:#fff;border:2px solid #2E2A26;border-radius:26px;box-shadow:8px 8px 0 #2E2A26;padding:clamp(36px,5vw,56px);text-align:center">
+          <div style="width:72px;height:72px;border-radius:50%;background:#62C370;border:2px solid #2E2A26;display:grid;place-items:center;margin:0 auto 20px;font-family:'Jua',sans-serif;font-size:34px;color:#fff;box-shadow:4px 4px 0 #2E2A26">✓</div>
+          <h3 style="font-family:'Jua',sans-serif;font-size:26px;margin:0 0 10px">{{ submittedName }}님, 감사합니다!</h3>
+          <p style="font-size:16px;line-height:1.7;color:#6B6259;margin:0 0 24px">신청이 접수되었어요. 빠른 시일 내에 따뜻하게 연락드릴게요.</p>
+          <button onClick="{{ resetForm }}" style="padding:13px 28px;background:#fff;color:#2E2A26;font-family:'Jua',sans-serif;font-size:16px;border:2px solid #2E2A26;border-radius:999px;box-shadow:4px 4px 0 #2E2A26;cursor:pointer" style-hover="transform:translate(-2px,-2px);box-shadow:6px 6px 0 #2E2A26">다시 작성하기</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#2E2A26;color:#FFFBF2;padding:clamp(40px,6vw,64px) 0 36px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,56px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start">
+      <div style="max-width:360px">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#FF6B5E;display:grid;place-items:center;color:#fff;font-family:'Jua',sans-serif;font-size:22px">로</span>
+          <span style="font-family:'Jua',sans-serif;font-size:23px">헬로로아</span>
+        </div>
+        <p style="font-size:15px;line-height:1.7;color:#C9C1B6;margin:0">그리는 아이의 마음이 무럭무럭 자라는 곳. 소중한 내 가족이라 생각하고 함께합니다.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#C9C1B6">
+        <a href="tel:0507-1301-2155" style="text-decoration:none;color:#FFFBF2;font-family:'Jua',sans-serif;font-size:18px">☎ 0507-1301-2155</a>
+        <a href="https://blog.naver.com/hello_roa" target="_blank" style="text-decoration:none;color:#FFCB3D">blog.naver.com/hello_roa</a>
+        <span>서울 양천구 목동중앙북로16길 62, 삼원기흥빌라 1층</span>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:28px auto 0;padding:20px clamp(18px,5vw,56px) 0;border-top:1px solid #4A443D;font-size:13px;color:#8C857A">© 2026 헬로로아. All rights reserved.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;heroSlideCount&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 4, &quot;min&quot;: 1, &quot;max&quot;: 8, &quot;step&quot;: 1, &quot;tsType&quot;: &quot;number&quot;, &quot;unit&quot;: &quot;장&quot;, &quot;section&quot;: &quot;히어로 슬라이드&quot;},
+  &quot;galleryCount&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 8, &quot;min&quot;: 3, &quot;max&quot;: 12, &quot;step&quot;: 1, &quot;tsType&quot;: &quot;number&quot;, &quot;unit&quot;: &quot;칸&quot;, &quot;section&quot;: &quot;콘텐츠&quot;},
+  &quot;showCounseling&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;콘텐츠&quot;}
+}">
+class Component extends DCLogic {
+  state = { submitted: false, name: '', mapReady: false, heroIndex: 0, heroPaused: false };
+  mapRef = React.createRef();
+  address = '서울 양천구 목동중앙북로16길 62 삼원기흥빌라';
+
+  componentDidMount() {
+    this._mapTries = 0;
+    this.tryInitMap();
+    this.startHero();
+  }
+
+  componentWillUnmount() {
+    if (this._mapTimer) clearTimeout(this._mapTimer);
+    if (this._map) { try { this._map.destroy(); } catch (e) {} }
+    if (this._heroTimer) clearInterval(this._heroTimer);
+  }
+
+  heroCount() {
+    return Math.max(1, Math.min(10, this.props.heroSlideCount ?? 4));
+  }
+
+  startHero() {
+    if (this._heroTimer) clearInterval(this._heroTimer);
+    this._heroTimer = setInterval(() => {
+      if (this.state.heroPaused) return;
+      this.setState(s => ({ heroIndex: (s.heroIndex + 1) % this.heroCount() }));
+    }, 5000);
+  }
+
+  goHero(i) {
+    const n = this.heroCount();
+    this.setState({ heroIndex: ((i % n) + n) % n });
+  }
+
+  tryInitMap() {
+    const n = window.naver;
+    if (n && n.maps && n.maps.Map) {
+      this.initMap();
+      return;
+    }
+    if (this._mapTries++ < 60) {
+      this._mapTimer = setTimeout(() => this.tryInitMap(), 200);
+    }
+  }
+
+  initMap() {
+    const el = this.mapRef.current;
+    const n = window.naver;
+    if (!el || !n || this._map) return;
+    // 등록되지 않은 도메인 등 인증 실패 시 오류 타일을 안내 화면으로 덮음
+    window.navermap_authFailure = () => { this._authFailed = true; this.setState({ mapReady: false }); };
+    const pos = new n.maps.LatLng(37.5434189, 126.8738371);
+    let map;
+    try {
+      map = new n.maps.Map(el, { center: pos, zoom: 17 });
+    } catch (e) { return; }
+    this._map = map;
+    if (this._authFailed) return;
+    new n.maps.Marker({ position: pos, map });
+    this.setState({ mapReady: true });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const name = (fd.get('name') || '').toString().trim();
+    this.setState({ submitted: true, name });
+  }
+
+  renderVals() {
+    const count = Math.max(1, Math.min(12, this.props.galleryCount ?? 8));
+    const hCount = this.heroCount();
+    const hIndex = this.state.heroIndex || 0;
+    const heroSlides = Array.from({ length: hCount }, (_, n) => {
+      const active = n === hIndex;
+      return {
+        n,
+        wrapStyle: 'position:absolute;inset:0;transition:opacity .6s ease;opacity:' + (active ? '1' : '0') + ';pointer-events:' + (active ? 'auto' : 'none') + ';z-index:' + (active ? '2' : '1'),
+        dotStyle: 'width:' + (active ? '26px' : '11px') + ';height:11px;padding:0;border-radius:999px;border:2px solid #2E2A26;cursor:pointer;transition:all .3s ease;background:' + (active ? '#FF6B5E' : 'rgba(255,251,242,0.92)'),
+        go: () => this.goHero(n),
+      };
+    });
+    return {
+      heroSlides,
+      prevHero: () => this.goHero(hIndex - 1),
+      nextHero: () => this.goHero(hIndex + 1),
+      pauseHero: () => this.setState({ heroPaused: true }),
+      resumeHero: () => this.setState({ heroPaused: false }),
+      gallerySlots: Array.from({ length: count }, (_, i) => i),
+      showCounseling: this.props.showCounseling ?? true,
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      submittedName: this.state.name || '보호자',
+      mapRef: this.mapRef,
+      mapNotReady: !this.state.mapReady,
+      naverMapLink: 'https://map.naver.com/p/search/' + encodeURIComponent('서울 양천구 목동중앙북로16길 62'),
+      handleSubmit: this.handleSubmit.bind(this),
+      resetForm: () => this.setState({ submitted: false, name: '' }),
+    };
+  }
+}
+</script>
+</body>
+</html>
